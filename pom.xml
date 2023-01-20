@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.suyh</groupId>
+    <artifactId>example-suyh-sofa-ark</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>conflict-v1</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>example-conflict-v1</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>conflict-v2</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>example-conflict-v2</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>hello</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>example-hello</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>hi</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>example-hi</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>app</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>example-suyh-demo-app</module>
+            </modules>
+        </profile>
+    </profiles>
+
+</project>
