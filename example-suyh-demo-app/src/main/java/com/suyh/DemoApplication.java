@@ -9,5 +9,6 @@ public class DemoApplication {
     public static void main(String[] args) {
         SofaArkBootstrap.launch(args);
         SpringApplication.run(DemoApplication.class, args);
+        System.out.println("DemoApplication class loader: " + DemoApplication.class.getClassLoader());
     }
 }
