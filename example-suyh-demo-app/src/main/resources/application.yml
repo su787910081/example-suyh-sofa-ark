@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: class-isolation
+
+server:
+  port: 6018
+
